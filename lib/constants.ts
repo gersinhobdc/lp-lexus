@@ -40,45 +40,45 @@ export const SERVICES = [
     icon: "Home",
     title: "Automação Residencial",
     description:
-      "Controle iluminação, climatização, áudio, cortinas e segurança de qualquer lugar. Integração total com Alexa, Google Home e Apple HomeKit.",
+      "Controle, iluminação, som, climatização e segurança em um único toque. Integração com apps de secretárias virtuais e inteligência artificial.",
     color: "#22C55E",
-    features: ["Controle por voz e app", "Cenas e automações", "Integração universal"],
+    features: ["Controle por voz e app", "Cenas e automações", "Um único toque"],
   },
   {
-    id: "corporate",
-    icon: "Building2",
-    title: "Automação Corporativa",
+    id: "audio",
+    icon: "Volume2",
+    title: "Som Ambiente",
     description:
-      "Salas de reunião inteligentes, controle de acesso, monitoramento e eficiência energética para escritórios e comércios.",
-    color: "#1E40AF",
-    features: ["Salas de reunião smart", "Controle de acesso", "Eficiência energética"],
+      "Tenha sua casa com o melhor sistema de som ambiente, integrado à automação. Música em todos os cômodos, simples e intuitivo.",
+    color: "#EC4899",
+    features: ["Som multiroom", "Integrado à automação", "Controle pelo app"],
+  },
+  {
+    id: "theater",
+    icon: "Volume2",
+    title: "Home Theater",
+    description:
+      "Tenha a sensação de cinema em casa. Sistema de Home Theater com caixas acústicas bookshelf ou embutidas no gesso e cabeamento profissional.",
+    color: "#FACC15",
+    features: ["Cinema em casa", "Caixas premium", "Cabeamento profissional"],
   },
   {
     id: "cftv",
     icon: "ShieldCheck",
     title: "CFTV & Segurança",
     description:
-      "Câmeras 4K com visão noturna, gravação em nuvem, alertas inteligentes e monitoramento remoto 24h para sua tranquilidade.",
-    color: "#FACC15",
-    features: ["Câmeras 4K HDR", "Alertas por IA", "Acesso remoto 24h"],
-  },
-  {
-    id: "theater",
-    icon: "Volume2",
-    title: "Áudio & Home Theater",
-    description:
-      "Experiência cinematográfica em casa. Sistemas multiroom, home theater 4K/8K, projetores e acústica profissional.",
-    color: "#EC4899",
-    features: ["Som multiroom", "Home theater 4K/8K", "Acústica profissional"],
+      "Instalação de câmeras de segurança 4K com visão noturna e gravação em nuvem. Venda e instalação de fechaduras eletrônicas com acesso via app.",
+    color: "#1E40AF",
+    features: ["Câmeras 4K", "Gravação em nuvem", "Fechadura via app"],
   },
   {
     id: "wifi",
     icon: "Wifi",
-    title: "Rede Mesh WiFi",
+    title: "Rede Wi-Fi Mesh",
     description:
-      "Cobertura total sem pontos cegos, velocidade gigabit e rede segmentada para IoT, garantindo que todos os dispositivos funcionem perfeitamente.",
+      "Cobertura Wi-Fi em todos os ambientes da casa. Para você andar pela sua casa e não perder a conexão — sem travamento no filme ou no app.",
     color: "#22C55E",
-    features: ["Cobertura total", "Gigabit WiFi 6E", "Rede IoT dedicada"],
+    features: ["Cobertura total", "Sem travamento", "Sinal em toda casa"],
   },
 ] as const;
 

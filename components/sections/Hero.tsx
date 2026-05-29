@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ChevronDown, Zap } from "lucide-react";
+import { Zap } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { ParticleField } from "@/components/ui/ParticleField";
 import { fadeUp, staggerContainer } from "@/lib/animations";
@@ -80,11 +80,13 @@ export function Hero() {
         {/* Subtitle */}
         <motion.p
           variants={fadeUp}
-          className="text-lg md:text-xl text-[#A1A1AA] max-w-2xl mx-auto mb-10 leading-relaxed"
+          className="text-lg md:text-xl text-[#A1A1AA] max-w-3xl mx-auto mb-10 leading-relaxed"
         >
-          Iluminação, segurança, climatização e som integrados em um único toque.
-          Mais de <strong className="text-[#E8E8ED]">500 ambientes inteligentes</strong> entregues
-          em São Paulo — com a engenharia e o acabamento que o seu projeto merece.
+          Iluminação, som ambiente, climatização e segurança — tudo junto e integrado
+          em um único toque. Mais de{" "}
+          <strong className="text-[#E8E8ED]">2.500 ambientes inteligentes</strong>{" "}
+          entregues em São Paulo, com a expertise da Lexus e o acabamento que o seu
+          projeto merece.
         </motion.p>
 
         {/* CTAs */}
@@ -96,7 +98,7 @@ export function Hero() {
               document.getElementById("diagnostico")?.scrollIntoView({ behavior: "smooth" })
             }
           >
-            Quero meu orçamento gratuito
+            Descubra o potencial da sua casa
           </Button>
           <Button
             size="lg"
@@ -115,7 +117,7 @@ export function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-[#A1A1AA]"
         >
           <span>
-            <strong className="text-[#E8E8ED]">500+</strong> projetos entregues
+            <strong className="text-[#E8E8ED]">2.500+</strong> projetos entregues
           </span>
           <span className="hidden sm:block w-px h-4 bg-white/10" aria-hidden="true" />
           <span>
@@ -123,32 +125,11 @@ export function Hero() {
           </span>
           <span className="hidden sm:block w-px h-4 bg-white/10" aria-hidden="true" />
           <span>
-            <strong className="text-[#E8E8ED]">98%</strong> clientes satisfeitos
+            <strong className="text-[#E8E8ED]">100%</strong> equipe Lexus
           </span>
         </motion.div>
       </motion.div>
 
-      {/* Scroll indicator */}
-      <motion.button
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 0.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1 text-[#A1A1AA] hover:text-[#22C55E] transition-colors cursor-pointer group"
-        onClick={() =>
-          document.getElementById("parceiros")?.scrollIntoView({ behavior: "smooth" })
-        }
-        aria-label="Rolar para baixo"
-      >
-        <span className="font-mono text-[10px] tracking-widest uppercase opacity-60 group-hover:opacity-100 transition-opacity">
-          scroll
-        </span>
-        <motion.div
-          animate={{ y: [0, 6, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <ChevronDown size={20} aria-hidden="true" />
-        </motion.div>
-      </motion.button>
     </section>
   );
 }

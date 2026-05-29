@@ -28,10 +28,10 @@ export function Problem() {
     <section id="problemas" className="py-24 bg-[#1C1D27]" aria-label="Problemas e soluções">
       <div className="section-container">
         <SectionTitle
-          eyebrow="Por que automatizar"
-          title="Sua casa tem"
-          titleHighlight="esses problemas?"
-          subtitle="Reconhece algum desses cenários? A Lexus resolve cada um deles com tecnologia premium e instalação sem dor de cabeça."
+          eyebrow="O que muda com a Lexus"
+          title="Sua casa já tem"
+          titleHighlight="essas soluções?"
+          subtitle="Reconhece algum desses cenários? A Lexus resolve cada um com tecnologia premium e instalação sem dor de cabeça — sem quebra-quebra."
         />
 
         <motion.div

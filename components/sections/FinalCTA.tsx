@@ -50,7 +50,7 @@ export function FinalCTA() {
             variants={fadeUp}
             className="text-[#A1A1AA] text-lg max-w-xl mx-auto mb-10"
           >
-            Agende sua visita técnica gratuita e descubra como transformar seu espaço em
+            Agende sua visita técnica e descubra como transformar seu espaço em
             um ambiente inteligente, seguro e eficiente.
           </motion.p>
 
@@ -81,7 +81,7 @@ export function FinalCTA() {
             className="flex items-center justify-center gap-2 text-sm text-[#A1A1AA]"
           >
             <ShieldCheck size={16} className="text-[#22C55E]" aria-hidden="true" />
-            <span>Visita técnica gratuita · Sem compromisso · Garantia de 12 meses</span>
+            <span>Instalação com 90 dias de garantia</span>
           </motion.div>
         </motion.div>
       </div>

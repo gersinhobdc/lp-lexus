@@ -5,7 +5,6 @@ import { Problem } from "@/components/sections/Problem";
 import { Services } from "@/components/sections/Services";
 import { MidCTA } from "@/components/sections/MidCTA";
 import { HowItWorks } from "@/components/sections/HowItWorks";
-import { Projects } from "@/components/sections/Projects";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { About } from "@/components/sections/About";
 import { FAQ } from "@/components/sections/FAQ";
@@ -27,6 +26,7 @@ export default function HomePage() {
     url: SITE.url,
     telephone: SITE.phone,
     email: SITE.email,
+    taxID: SITE.cnpj,
     address: {
       "@type": "PostalAddress",
       streetAddress: SITE.address.street,
@@ -45,7 +45,7 @@ export default function HomePage() {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         opens: "08:00",
-        closes: "18:00",
+        closes: "17:30",
       },
     ],
     sameAs: [SITE.instagram, SITE.youtube, SITE.facebook],
@@ -62,16 +62,15 @@ export default function HomePage() {
       <Navbar />
       <main id="main-content">
         <Hero />
+        <LeadForm />
         <SocialProof />
         <Problem />
         <Services />
         <MidCTA />
         <HowItWorks />
-        <Projects />
         <Testimonials />
         <About />
         <FAQ />
-        <LeadForm />
         <FinalCTA />
       </main>
       <Footer />

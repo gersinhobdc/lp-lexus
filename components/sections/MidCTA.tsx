@@ -49,7 +49,7 @@ export function MidCTA() {
           viewport={viewportConfig}
           className="text-[#A1A1AA] text-lg mb-10 max-w-xl mx-auto"
         >
-          Visita técnica gratuita, projeto 3D e orçamento sem compromisso em São Paulo.
+          Realizamos visitas técnicas e consultorias em São Paulo para definir o melhor projeto para seu ambiente.
         </motion.p>
 
         <motion.div

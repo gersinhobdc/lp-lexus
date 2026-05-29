@@ -51,7 +51,7 @@ export function About() {
             {/* Floating badge */}
             <div className="absolute -top-4 -right-4 glass rounded-xl p-4 flex items-center gap-2 glow-green">
               <Shield size={18} className="text-[#22C55E]" aria-hidden="true" />
-              <p className="text-xs font-semibold text-[#E8E8ED]">Garantia 12 meses</p>
+              <p className="text-xs font-semibold text-[#E8E8ED]">Instalação com 90 dias de garantia</p>
             </div>
           </motion.div>
 

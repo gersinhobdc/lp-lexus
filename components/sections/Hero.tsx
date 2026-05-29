@@ -82,7 +82,7 @@ export function Hero() {
           variants={fadeUp}
           className="text-lg md:text-xl text-[#A1A1AA] max-w-3xl mx-auto mb-10 leading-relaxed"
         >
-          Iluminação, som ambiente, climatização e segurança — tudo junto e integrado
+            Iluminação, som ambiente, climatização e segurança tudo junto e integrado
           em um único toque. Mais de{" "}
           <strong className="text-[#E8E8ED]">2.500 ambientes inteligentes</strong>{" "}
           entregues em São Paulo, com a expertise da Lexus e o acabamento que o seu
@@ -104,10 +104,10 @@ export function Hero() {
             size="lg"
             variant="outline"
             onClick={() =>
-              document.getElementById("projetos")?.scrollIntoView({ behavior: "smooth" })
+              document.getElementById("servicos")?.scrollIntoView({ behavior: "smooth" })
             }
           >
-            Ver projetos
+            Ver serviços
           </Button>
         </motion.div>
 

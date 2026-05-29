@@ -91,7 +91,7 @@ export function ExitIntentPopup() {
                 className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/8 text-[#E8E8ED] placeholder-[#A1A1AA]/50 text-sm focus:outline-none focus:border-[#22C55E]/60 transition-colors"
               />
               <Button type="submit" size="md" className="w-full">
-                Quero o catálogo gratuito
+                Quero receber
               </Button>
             </form>
 

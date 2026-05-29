@@ -2,13 +2,13 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Hash } from "lucide-react";
 import { SITE } from "@/lib/constants";
 import { fadeUp, viewportConfig } from "@/lib/animations";
 
 const QUICK_LINKS = [
   { label: "Serviços", href: "#servicos" },
-  { label: "Projetos", href: "#projetos" },
+  { label: "Sobre", href: "#sobre" },
   { label: "Como Funciona", href: "#como-funciona" },
   { label: "Depoimentos", href: "#depoimentos" },
   { label: "FAQ", href: "#faq" },
@@ -32,12 +32,16 @@ export function Footer() {
           <div>
             <FooterLogo />
             <p className="mt-4 text-sm text-[#A1A1AA] leading-relaxed max-w-xs">
-              Especialistas em automação residencial e corporativa premium em São Paulo. Tecnologia de ponta, instalação sem obra.
+              Especialistas em automação residencial premium em São Paulo. Tecnologia de ponta, instalação sem obra.
             </p>
             <div className="flex gap-3 mt-5">
               <SocialLinkSvg href={SITE.instagram} label="Instagram" icon="instagram" />
               <SocialLinkSvg href={SITE.youtube} label="YouTube" icon="youtube" />
               <SocialLinkSvg href={SITE.facebook} label="Facebook" icon="facebook" />
+            </div>
+            <div className="mt-4 flex items-center gap-2 text-sm text-[#A1A1AA]">
+              <Clock size={14} className="text-[#22C55E]" aria-hidden="true" />
+              {SITE.hours.weekdays}
             </div>
           </div>
 
@@ -125,10 +129,11 @@ export function Footer() {
           <p>
             © {year} {SITE.name}. Todos os direitos reservados.
           </p>
-          <div className="flex gap-4">
+          <div className="flex flex-col sm:flex-row items-center gap-4">
             <a href="/politica-privacidade" className="hover:text-[#22C55E] transition-colors">
               Política de Privacidade
             </a>
+            <span className="text-sm">CNPJ {SITE.cnpj}</span>
           </div>
         </div>
       </div>

@@ -55,7 +55,7 @@ export default function PoliticaPrivacidade() {
             <h2 className="text-[#E8E8ED] text-xl font-semibold mb-3">3. Finalidade do uso</h2>
             <p>Seus dados são utilizados exclusivamente para:</p>
             <ul className="list-disc list-inside space-y-1 mt-2">
-              <li>Entrar em contato para agendar visita técnica gratuita</li>
+              <li>Entrar em contato para agendar visita técnica</li>
               <li>Enviar orçamento personalizado</li>
               <li>Comunicações relacionadas ao serviço solicitado</li>
               <li>Melhoria contínua do nosso site e serviços</li>

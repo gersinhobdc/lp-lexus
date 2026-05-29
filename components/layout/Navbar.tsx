@@ -33,7 +33,7 @@ export function Navbar() {
     >
       <div className="section-container flex items-center justify-between">
         {/* Logo */}
-        <a href="#hero" aria-label="Lexus Automação Inteligente — topo da página">
+        <a href="#hero" aria-label="Lexus Automação Inteligente topo da página">
           <LexusLogo />
         </a>
 
@@ -48,7 +48,7 @@ export function Navbar() {
             {SITE.phoneDisplay}
           </a>
           <Button size="sm" onClick={scrollToForm}>
-            Orçamento gratuito
+            Quero orçamento
           </Button>
         </div>
       </div>

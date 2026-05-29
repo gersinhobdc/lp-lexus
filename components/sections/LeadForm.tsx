@@ -47,7 +47,7 @@ const PROJECT_OPTIONS: {
 const TRUST_SEALS = [
   { icon: ShieldCheck, label: "Sem spam" },
   { icon: Clock, label: "Resposta em até 1h" },
-  { icon: BadgeCheck, label: "Avaliação gratuita" },
+  { icon: BadgeCheck, label: "Avaliação confiável" },
 ];
 
 export function LeadForm() {
@@ -130,7 +130,7 @@ export function LeadForm() {
             viewport={{ once: true }}
             className="font-mono text-xs tracking-[0.2em] uppercase text-[#22C55E] mb-3"
           >
-            Orçamento gratuito
+            Orçamento
           </motion.p>
           <motion.h2
             variants={fadeUp}
@@ -150,7 +150,7 @@ export function LeadForm() {
             className="mt-4 text-[#A1A1AA]"
           >
             Responda 2 perguntas rápidas e um especialista entra em contato para agendar
-            sua visita técnica — sem custo e sem compromisso.
+            sua visita técnica.
           </motion.p>
 
           {/* Escassez honesta */}
@@ -214,7 +214,7 @@ export function LeadForm() {
                   <p className="text-[#A1A1AA] leading-relaxed">
                     Nossa equipe entrará em contato em até{" "}
                     <strong className="text-[#22C55E]">1 hora</strong> para agendar sua
-                    visita técnica gratuita.
+                    visita técnica.
                   </p>
                   <a
                     href={SITE.whatsapp}

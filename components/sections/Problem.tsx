@@ -31,7 +31,7 @@ export function Problem() {
           eyebrow="O que muda com a Lexus"
           title="Sua casa já tem"
           titleHighlight="essas soluções?"
-          subtitle="Reconhece algum desses cenários? A Lexus resolve cada um com tecnologia premium e instalação sem dor de cabeça — sem quebra-quebra."
+          subtitle="Reconhece algum desses cenários? A Lexus resolve cada um com tecnologia premium e instalação sem dor de cabeça."
         />
 
         <motion.div

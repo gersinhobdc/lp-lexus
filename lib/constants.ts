@@ -76,19 +76,17 @@ export const SERVICES = [
     icon: "Wifi",
     title: "Rede Wi-Fi Mesh",
     description:
-      "Cobertura Wi-Fi em todos os ambientes da casa. Para você andar pela sua casa e não perder a conexão — sem travamento no filme ou no app.",
+      "Cobertura Wi-Fi em todos os ambientes da casa. Para você andar pela sua casa e não perder a conexão sem travamento no filme ou no app.",
     color: "#22C55E",
     features: ["Cobertura total", "Sem travamento", "Sinal em toda casa"],
   },
 ] as const;
 
 export const BRANDS = [
-  { name: "Control4", src: "/images/brands/control4.png" },
+  { name: "Intelbras", src: "/images/brands/intelbras.png" },
   { name: "Sonos", src: "/images/brands/sonos.png" },
-  { name: "Lutron", src: "/images/brands/lutron.png" },
-  { name: "Amazon Alexa", src: "/images/brands/alexa.png" },
-  { name: "Google Home", src: "/images/brands/google-home.png" },
-  { name: "Apple HomeKit", src: "/images/brands/homekit.svg" },
+  { name: "Nova Digital", src: "/images/brands/nova-digital.png" },
+  { name: "Aparelhos de comando de voz", src: undefined },
   { name: "Hikvision", src: "/images/brands/hikvision.png" },
   { name: "Ubiquiti", src: "/images/brands/ubiquiti.png" },
 ] as const;
@@ -134,24 +132,14 @@ export const TESTIMONIALS = [
 
 export const FAQS = [
   {
-    question: "Quanto custa automatizar minha casa?",
-    answer:
-      "O investimento varia conforme o tamanho do imóvel e os sistemas desejados. Projetos básicos começam a partir de R$ 8.000, mas oferecemos diagnóstico gratuito para dar um orçamento preciso sem compromisso.",
-  },
-  {
     question: "Funciona em apartamentos já prontos?",
     answer:
       "Sim! A maioria dos nossos projetos usa tecnologia sem fio (Zigbee, Z-Wave, WiFi) que não exige quebrar paredes. Instalamos sem reforma na grande maioria dos casos.",
   },
   {
-    question: "Posso integrar com a Alexa que já tenho?",
+    question: "Posso usar comandos de voz no meu sistema?",
     answer:
-      "Absolutamente. Todos os nossos projetos são compatíveis com Alexa, Google Home e Apple HomeKit. Podemos expandir o que você já tem ou criar uma automação totalmente integrada.",
-  },
-  {
-    question: "Qual o prazo de instalação?",
-    answer:
-      "Imóveis menores (até 100m²): 1 a 2 dias. Residências médias: 3 a 5 dias. Projetos maiores ou corporativos: acordado no projeto. Trabalhamos com planejamento detalhado para minimizar impacto na sua rotina.",
+      "Sim! A automação pode funcionar com aparelhos de comando de voz e sistemas de assistência já existentes. Podemos integrar ou implantar a solução mais adequada ao seu projeto.",
   },
   {
     question: "Vocês atendem qual região de SP?",
@@ -161,40 +149,36 @@ export const FAQS = [
   {
     question: "Tem garantia? E suporte depois da instalação?",
     answer:
-      "Sim! Todos os projetos têm 12 meses de garantia na instalação. Oferecemos suporte técnico 24h por WhatsApp e planos de manutenção preventiva para manter tudo funcionando perfeitamente.",
+      "Oferecemos garantia de 90 dias para instalação. Após esse período, continuamos com suporte remoto e podemos ajudar com manutenções e melhorias.",
   },
   {
     question: "Preciso reformar para automatizar?",
     answer:
       "Não necessariamente. Usamos tecnologias sem fio avançadas que funcionam sem obras. Em casos onde a fiação existente é aproveitada, o processo é ainda mais simples.",
   },
-  {
-    question: "Como funciona o orçamento gratuito?",
-    answer:
-      "Agendamos uma visita técnica gratuita onde analisamos seu imóvel, entendemos suas necessidades e apresentamos um projeto 3D com lista de materiais e valores. Tudo sem compromisso.",
-  },
+
 ] as const;
 
 export const HOW_IT_WORKS = [
   {
     step: "01",
-    title: "Diagnóstico gratuito",
+    title: "Diagnóstico técnico",
     description:
-      "Nosso especialista vai até você, analisa o imóvel e entende o que você precisa. Visita técnica sem custo.",
+      "Nossa equipe visita seu imóvel, analisa o espaço e entende o que você precisa para o seu projeto.",
     icon: "Search",
   },
   {
     step: "02",
     title: "Projeto sob medida",
     description:
-      "Desenvolvemos um projeto 3D personalizado com lista completa de materiais e cronograma de instalação.",
+      "Criamos um orçamento e um plano de instalação alinhados ao seu projeto, com foco no que realmente importa.",
     icon: "FileText",
   },
   {
     step: "03",
     title: "Instalação premium",
     description:
-      "Equipe especializada instala tudo com capricho. Garantia de 12 meses e suporte contínuo após entrega.",
+      "Equipe Lexus instala tudo com padrão profissional, suporte pós-instalação e garantia real.",
     icon: "CheckCircle",
   },
 ] as const;
@@ -208,7 +192,7 @@ export const PROJECT_SHOWCASE = [
   {
     title: "Residências automatizadas",
     category: "Casa Inteligente",
-    description: "Iluminação, cortinas, clima e cenas — tudo controlado por voz ou app.",
+    description: "Iluminação, cortinas, clima e cenas tudo controlado por voz ou app.",
     color: "#22C55E",
     span: "lg:col-span-2",
   },
@@ -221,16 +205,9 @@ export const PROJECT_SHOWCASE = [
   },
   {
     title: "CFTV & Segurança",
-    category: "Monitoramento 24h",
+    category: "Segurança",
     description: "Câmeras 4K com alertas inteligentes e acesso remoto.",
     color: "#FACC15",
-    span: "",
-  },
-  {
-    title: "Automação Corporativa",
-    category: "Escritórios & Comércio",
-    description: "Salas de reunião smart, controle de acesso e eficiência energética.",
-    color: "#1E40AF",
     span: "",
   },
   {
@@ -243,7 +220,7 @@ export const PROJECT_SHOWCASE = [
 ] as const;
 
 /**
- * Escassez honesta — agenda mensal de visitas técnicas gratuitas.
+ * Escassez honesta — agenda mensal de visitas técnicas disponíveis.
  * Ajuste SLOTS_TOTAL/SLOTS_TAKEN a cada mês conforme a real disponibilidade da equipe.
  */
 export const SCARCITY = {
@@ -252,5 +229,5 @@ export const SCARCITY = {
   get slotsLeft() {
     return this.slotsTotal - this.slotsTaken;
   },
-  label: "visitas técnicas gratuitas disponíveis este mês",
+  label: "visitas técnicas disponíveis este mês",
 } as const;

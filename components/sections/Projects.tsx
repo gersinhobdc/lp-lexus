@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Play, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { SITE, PROJECT_SHOWCASE } from "@/lib/constants";
 import { staggerContainer, fadeUp, viewportConfig } from "@/lib/animations";
@@ -29,10 +29,10 @@ export function Projects() {
     <section id="projetos" className="py-24 bg-[#1C1D27]" aria-label="Projetos realizados">
       <div className="section-container">
         <SectionTitle
-          eyebrow="Portfólio em vídeo"
-          title="Veja a automação"
-          titleHighlight="funcionando de verdade"
-          subtitle="Mais de 500 ambientes entregues em São Paulo. Acompanhe os bastidores e o resultado final de cada projeto no nosso Instagram."
+          eyebrow="Portfólio"
+          title="Veja nossa automação"
+          titleHighlight="em ação"
+          subtitle="Mais de 500 ambientes entregues em São Paulo. Acompanhe nossos projetos e resultados reais no Instagram."
         />
 
         <motion.div
@@ -79,10 +79,10 @@ export function Projects() {
                     border: `1px solid ${project.color}40`,
                   }}
                 >
-                  <Play
+                  <ArrowUpRight
                     size={16}
                     className="translate-x-0.5"
-                    style={{ color: project.color, fill: project.color }}
+                    style={{ color: project.color }}
                     aria-hidden="true"
                   />
                 </span>
@@ -101,7 +101,7 @@ export function Projects() {
                   style={{ color: project.color }}
                 >
                   <InstagramIcon size={13} color={project.color} />
-                  Ver vídeos
+                  Ver no Instagram
                   <ArrowUpRight
                     size={13}
                     className="opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
@@ -136,7 +136,7 @@ export function Projects() {
             />
           </a>
           <p className="text-xs text-[#A1A1AA]/70 mt-3">
-            Novos projetos toda semana — bastidores, antes e depois e tutoriais.
+            Novos projetos toda semana.
           </p>
         </motion.div>
       </div>

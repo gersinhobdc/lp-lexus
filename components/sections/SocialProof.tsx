@@ -64,16 +64,22 @@ export function SocialProof() {
   );
 }
 
-function BrandLogo({ name, src }: { name: string; src: string }) {
+function BrandLogo({ name, src }: { name: string; src?: string }) {
   return (
     <div className="shrink-0 flex items-center justify-center h-16 w-36 rounded-xl bg-white/90 px-4 py-3 opacity-70 hover:opacity-100 transition-opacity duration-300">
-      <Image
-        src={src}
-        alt={name}
-        width={160}
-        height={56}
-        className="max-h-10 w-auto object-contain"
-      />
+      {src ? (
+        <Image
+          src={src}
+          alt={name}
+          width={160}
+          height={56}
+          className="max-h-10 w-auto object-contain"
+        />
+      ) : (
+        <span className="text-xs font-semibold text-[#0A0A0A] text-center leading-tight">
+          {name}
+        </span>
+      )}
     </div>
   );
 }

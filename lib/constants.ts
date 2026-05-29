@@ -29,10 +29,9 @@ export const SITE = {
 } as const;
 
 export const STATS = [
-  { value: 500, suffix: "+", label: "Projetos entregues" },
+  { value: 2500, suffix: "+", label: "Projetos entregues" },
   { value: 16, suffix: "+", label: "Anos de experiência" },
-  { value: 98, suffix: "%", label: "Clientes satisfeitos" },
-  { value: 24, suffix: "h", label: "Suporte técnico" },
+  { value: 100, suffix: "%", label: "Equipe Lexus" },
 ] as const;
 
 export const SERVICES = [

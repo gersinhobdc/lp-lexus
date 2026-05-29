@@ -1,24 +1,30 @@
 export const SITE = {
   name: "Lexus Automação Inteligente",
-  tagline: "Automação residencial e corporativa premium em São Paulo",
+  tagline: "Automação residencial premium em São Paulo",
   description:
-    "Transformamos sua casa e empresa em ambientes inteligentes com automação premium. Especialistas em Control4, Alexa, CFTV, Home Theater e Mesh WiFi em São Paulo.",
+    "Transformamos sua casa em ambiente inteligente com automação premium. Especialistas em iluminação, som ambiente, climatização, segurança e Wi-Fi mesh em São Paulo.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://lexusbr.com",
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_LINK ?? "https://wa.link/czw9nk",
   phone: process.env.NEXT_PUBLIC_PHONE ?? "+551156687773",
   phoneDisplay: "(11) 5668-7773",
   email: process.env.NEXT_PUBLIC_EMAIL ?? "lexus.automacao@gmail.com",
+  cnpj: "30.768.901/0001-99",
+  hours: {
+    weekdays: "Seg a Sex · 08:00 às 17:30",
+    opens: "08:00",
+    closes: "17:30",
+  },
   instagram: "https://www.instagram.com/lexus.automacao",
   youtube: "https://www.youtube.com",
   facebook: "https://www.facebook.com",
   address: {
-    street: "Rua Juan Gonzales Vila, 166 - Sala 02",
-    neighborhood: "Vila Santo Antônio",
+    street: "Av. Adolfo Pinheiro, 1800",
+    neighborhood: "Santo Amaro",
     city: "São Paulo",
     state: "SP",
-    zip: "04375-090",
-    full: "Rua Juan Gonzales Vila, 166 - Sala 02, Vila Santo Antônio, São Paulo - SP",
-    mapsUrl: "https://maps.google.com/?q=Rua+Juan+Gonzales+Vila+166+Vila+Santo+Antonio+Sao+Paulo",
+    zip: "04734-003",
+    full: "Av. Adolfo Pinheiro, 1800, Santo Amaro, São Paulo - SP",
+    mapsUrl: "https://maps.google.com/?q=Av+Adolfo+Pinheiro+1800+Sao+Paulo",
   },
 } as const;
 

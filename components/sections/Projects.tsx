@@ -29,10 +29,10 @@ export function Projects() {
     <section id="projetos" className="py-24 bg-[#1C1D27]" aria-label="Projetos realizados">
       <div className="section-container">
         <SectionTitle
-          eyebrow="Portfólio"
-          title="Veja nossa automação"
-          titleHighlight="em ação"
-          subtitle="Mais de 500 ambientes entregues em São Paulo. Acompanhe nossos projetos e resultados reais no Instagram."
+          eyebrow="Projetos entregues"
+          title="Veja a automação"
+          titleHighlight="funcionando de verdade"
+          subtitle="Mais de 2.500 ambientes entregues em São Paulo. Acompanhe os bastidores e o resultado final de cada projeto no nosso Instagram."
         />
 
         <motion.div

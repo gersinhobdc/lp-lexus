@@ -71,6 +71,7 @@ export default function HomePage() {
         <Testimonials />
         <About />
         <FAQ />
+        <LeadForm sectionId="diagnostico-final" />
         <FinalCTA />
       </main>
       <Footer />

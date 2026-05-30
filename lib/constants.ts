@@ -31,7 +31,7 @@ export const SITE = {
 export const STATS = [
   { value: 2500, suffix: "+", label: "Projetos entregues" },
   { value: 16, suffix: "+", label: "Anos de experiência" },
-  { value: 100, suffix: "%", label: "Equipe Lexus" },
+  { value: 100, suffix: "%", label: "Equipe própria Lexus" },
 ] as const;
 
 export const SERVICES = [
@@ -76,7 +76,7 @@ export const SERVICES = [
     icon: "Wifi",
     title: "Rede Wi-Fi Mesh",
     description:
-      "Cobertura Wi-Fi em todos os ambientes da casa. Para você andar pela sua casa e não perder a conexão sem travamento no filme ou no app.",
+      "Cobertura Wi-Fi em todos os ambientes da casa. Para você andar pela sua casa e não perder a conexão, sem travamento no filme ou no app.",
     color: "#22C55E",
     features: ["Cobertura total", "Sem travamento", "Sinal em toda casa"],
   },
@@ -132,53 +132,57 @@ export const TESTIMONIALS = [
 
 export const FAQS = [
   {
-    question: "Funciona em apartamentos já prontos?",
+    question: "Quanto custa automatizar minha casa?",
     answer:
-      "Sim! A maioria dos nossos projetos usa tecnologia sem fio (Zigbee, Z-Wave, WiFi) que não exige quebrar paredes. Instalamos sem reforma na grande maioria dos casos.",
+      "Varia de acordo com a necessidade de cada ambiente. Realizamos uma visita técnica para entender o seu projeto e elaborar um orçamento personalizado.",
   },
   {
-    question: "Posso usar comandos de voz no meu sistema?",
+    question: "Funciona em apartamentos já prontos?",
     answer:
-      "Sim! A automação pode funcionar com aparelhos de comando de voz e sistemas de assistência já existentes. Podemos integrar ou implantar a solução mais adequada ao seu projeto.",
+      "Sim, funciona em apartamentos já prontos. Em alguns casos é necessário ajustar alguns detalhes, mas sem necessidade de reforma.",
+  },
+  {
+    question: "Qual o prazo de instalação?",
+    answer:
+      "Varia de acordo com o projeto. Cada imóvel tem sua particularidade — pode demorar algumas horas ou alguns dias. Definimos o cronograma exato após a visita técnica.",
   },
   {
     question: "Vocês atendem qual região de SP?",
     answer:
-      "Atendemos toda a Grande São Paulo e interior. Para projetos especiais, podemos atender outras cidades. Entre em contato para verificar disponibilidade.",
+      "Atendemos preferencialmente a capital de São Paulo. Porém atendemos também a Grande São Paulo conforme o projeto.",
   },
   {
-    question: "Tem garantia? E suporte depois da instalação?",
+    question: "Tem garantia e suporte depois da instalação?",
     answer:
-      "Oferecemos garantia de 90 dias para instalação. Após esse período, continuamos com suporte remoto e podemos ajudar com manutenções e melhorias.",
+      "Sim. Garantia de 7 dias para produtos vendidos pela Lexus e 90 dias da instalação. Após esse período, oferecemos suporte remoto. Produtos seguem a garantia oficial do fabricante (geralmente 1 ano).",
   },
   {
     question: "Preciso reformar para automatizar?",
     answer:
-      "Não necessariamente. Usamos tecnologias sem fio avançadas que funcionam sem obras. Em casos onde a fiação existente é aproveitada, o processo é ainda mais simples.",
+      "Não. Porém, é necessária uma visita técnica para avaliar a readequação de alguns detalhes do imóvel.",
   },
-
 ] as const;
 
 export const HOW_IT_WORKS = [
   {
     step: "01",
-    title: "Diagnóstico técnico",
+    title: "Diagnóstico",
     description:
-      "Nossa equipe visita seu imóvel, analisa o espaço e entende o que você precisa para o seu projeto.",
+      "Nossa equipe vai até você, analisa o imóvel e entende o que você precisa através de uma visita técnica.",
     icon: "Search",
   },
   {
     step: "02",
     title: "Projeto sob medida",
     description:
-      "Criamos um orçamento e um plano de instalação alinhados ao seu projeto, com foco no que realmente importa.",
+      "Elaboramos um orçamento personalizado de acordo com as suas necessidades, com lista de materiais e cronograma.",
     icon: "FileText",
   },
   {
     step: "03",
     title: "Instalação premium",
     description:
-      "Equipe Lexus instala tudo com padrão profissional, suporte pós-instalação e garantia real.",
+      "Equipe especializada 100% colaboradores próprios da Lexus. Garantia de 7 dias do produto, 90 dias da instalação e suporte contínuo.",
     icon: "CheckCircle",
   },
 ] as const;
@@ -192,28 +196,35 @@ export const PROJECT_SHOWCASE = [
   {
     title: "Residências automatizadas",
     category: "Casa Inteligente",
-    description: "Iluminação, cortinas, clima e cenas tudo controlado por voz ou app.",
+    description: "Iluminação, cortinas, clima e cenas — tudo controlado por voz ou app.",
     color: "#22C55E",
     span: "lg:col-span-2",
   },
   {
-    title: "Home Theater & Áudio",
+    title: "Home Theater & Som Ambiente",
     category: "Cinema em casa",
-    description: "Salas de cinema e som multiroom com acústica profissional.",
+    description: "Salas de cinema e som multiroom com caixas premium e cabeamento profissional.",
     color: "#EC4899",
     span: "",
   },
   {
     title: "CFTV & Segurança",
-    category: "Segurança",
-    description: "Câmeras 4K com alertas inteligentes e acesso remoto.",
+    category: "Câmeras 4K",
+    description: "Instalação de câmeras 4K e fechaduras eletrônicas com acesso via app.",
     color: "#FACC15",
+    span: "",
+  },
+  {
+    title: "Rede Wi-Fi em toda casa",
+    category: "Sinal sem travamento",
+    description: "Cobertura total para você andar pela casa e não perder a conexão.",
+    color: "#1E40AF",
     span: "",
   },
   {
     title: "Projetos completos",
     category: "Do zero ao detalhe",
-    description: "Integração total de automação, rede, áudio e segurança em um só projeto.",
+    description: "Integração total de automação, som, rede e segurança em um só projeto.",
     color: "#22C55E",
     span: "lg:col-span-2",
   },
@@ -229,5 +240,5 @@ export const SCARCITY = {
   get slotsLeft() {
     return this.slotsTotal - this.slotsTaken;
   },
-  label: "visitas técnicas disponíveis este mês",
+  label: "agendas para visita técnica disponíveis este mês",
 } as const;

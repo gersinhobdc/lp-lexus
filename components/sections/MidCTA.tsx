@@ -27,7 +27,7 @@ export function MidCTA() {
           viewport={viewportConfig}
           className="font-mono text-xs tracking-[0.2em] uppercase text-[#22C55E] mb-4"
         >
-          Diagnóstico sem compromisso
+          Visita técnica e consultoria
         </motion.p>
 
         <motion.h2
@@ -39,7 +39,7 @@ export function MidCTA() {
         >
           Descubra o potencial da
           <br />
-          <span className="gradient-text">sua casa inteligente.</span>
+          <span className="gradient-text">sua casa.</span>
         </motion.h2>
 
         <motion.p

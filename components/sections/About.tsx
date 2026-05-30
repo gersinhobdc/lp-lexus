@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import { STATS } from "@/lib/constants";
 import { slideInLeft, slideInRight, viewportConfig } from "@/lib/animations";
-import { Shield, Award } from "lucide-react";
+import { Award } from "lucide-react";
 
 export function About() {
   return (
@@ -46,12 +46,6 @@ export function About() {
                   <p className="text-[10px] text-[#A1A1AA]">16+ anos em SP</p>
                 </div>
               </div>
-            </div>
-
-            {/* Floating badge */}
-            <div className="absolute -top-4 -right-4 glass rounded-xl p-4 flex items-center gap-2 glow-green">
-              <Shield size={18} className="text-[#22C55E]" aria-hidden="true" />
-              <p className="text-xs font-semibold text-[#E8E8ED]">Instalação com 90 dias de garantia</p>
             </div>
           </motion.div>
 

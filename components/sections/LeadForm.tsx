@@ -46,11 +46,11 @@ const PROJECT_OPTIONS: {
 
 const TRUST_SEALS = [
   { icon: ShieldCheck, label: "Sem spam" },
-  { icon: Clock, label: "Resposta em até 1h" },
+  { icon: Clock, label: "Retorno via WhatsApp" },
   { icon: BadgeCheck, label: "Avaliação confiável" },
 ];
 
-export function LeadForm() {
+export function LeadForm({ sectionId = "diagnostico" }: { sectionId?: string } = {}) {
   const [step, setStep] = useState(1);
   const [projectType, setProjectType] = useState<ProjectType | null>(null);
   const [submitted, setSubmitted] = useState(false);
@@ -107,7 +107,7 @@ export function LeadForm() {
 
   return (
     <section
-      id="diagnostico"
+      id={sectionId}
       className="py-24 relative overflow-hidden"
       aria-label="Formulário de orçamento"
     >
@@ -212,9 +212,8 @@ export function LeadForm() {
                     Solicitação recebida!
                   </h3>
                   <p className="text-[#A1A1AA] leading-relaxed">
-                    Nossa equipe entrará em contato em até{" "}
-                    <strong className="text-[#22C55E]">1 hora</strong> para agendar sua
-                    visita técnica.
+                    Nossa equipe entrará em contato o mais breve possível para agendar
+                    sua visita técnica.
                   </p>
                   <a
                     href={SITE.whatsapp}

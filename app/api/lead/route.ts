@@ -3,8 +3,6 @@ import { Resend } from "resend";
 import { leadSchema } from "@/lib/validations";
 import { getRatelimit } from "@/lib/ratelimit";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 async function verifyRecaptcha(token: string): Promise<boolean> {
   if (!process.env.RECAPTCHA_SECRET_KEY || token === "no-recaptcha") return true;
   try {
@@ -106,6 +104,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ ok: true });
   }
 
+  const resend = new Resend(process.env.RESEND_API_KEY);
   const { error } = await resend.emails.send({
     from: process.env.RESEND_FROM_EMAIL ?? "noreply@lexusbr.com",
     to: process.env.RESEND_TO_EMAIL ?? "lexus.automacao@gmail.com",

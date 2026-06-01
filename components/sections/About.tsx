@@ -70,7 +70,7 @@ export function About() {
             </p>
 
             {/* Stats grid */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-3 gap-4">
               {STATS.map((stat) => (
                 <div key={stat.label} className="glass rounded-xl p-4">
                   <p className="text-2xl font-bold text-[#22C55E] font-[var(--font-geist-sans)]">

@@ -285,11 +285,11 @@ export function LeadForm({ sectionId = "diagnostico" }: { sectionId?: string } =
                     <input type="hidden" {...register("recaptchaToken")} value="pending" />
 
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-[#E8E8ED] mb-1.5">
+                      <label htmlFor={`${sectionId}-name`} className="block text-sm font-medium text-[#E8E8ED] mb-1.5">
                         Nome completo
                       </label>
                       <input
-                        id="name"
+                        id={`${sectionId}-name`}
                         type="text"
                         autoComplete="name"
                         placeholder="João Silva"
@@ -308,11 +308,11 @@ export function LeadForm({ sectionId = "diagnostico" }: { sectionId?: string } =
                     </div>
 
                     <div>
-                      <label htmlFor="whatsapp" className="block text-sm font-medium text-[#E8E8ED] mb-1.5">
+                      <label htmlFor={`${sectionId}-whatsapp`} className="block text-sm font-medium text-[#E8E8ED] mb-1.5">
                         WhatsApp
                       </label>
                       <input
-                        id="whatsapp"
+                        id={`${sectionId}-whatsapp`}
                         type="tel"
                         autoComplete="tel"
                         placeholder="(11) 99999-9999"
@@ -331,11 +331,11 @@ export function LeadForm({ sectionId = "diagnostico" }: { sectionId?: string } =
                     </div>
 
                     <div>
-                      <label htmlFor="city" className="block text-sm font-medium text-[#E8E8ED] mb-1.5">
+                      <label htmlFor={`${sectionId}-city`} className="block text-sm font-medium text-[#E8E8ED] mb-1.5">
                         Cidade
                       </label>
                       <input
-                        id="city"
+                        id={`${sectionId}-city`}
                         type="text"
                         autoComplete="address-level2"
                         placeholder="São Paulo"

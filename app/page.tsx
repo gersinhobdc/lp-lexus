@@ -5,6 +5,7 @@ import { Problem } from "@/components/sections/Problem";
 import { Services } from "@/components/sections/Services";
 import { MidCTA } from "@/components/sections/MidCTA";
 import { HowItWorks } from "@/components/sections/HowItWorks";
+import { Projects } from "@/components/sections/Projects";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { About } from "@/components/sections/About";
 import { FAQ } from "@/components/sections/FAQ";
@@ -13,7 +14,9 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 import { Footer } from "@/components/sections/Footer";
 import { FloatingWhatsApp } from "@/components/conversion/FloatingWhatsApp";
 import { StickyMobileCTA } from "@/components/conversion/StickyMobileCTA";
-import { ExitIntentPopup } from "@/components/conversion/ExitIntentPopup";
+// import { ExitIntentPopup } from "@/components/conversion/ExitIntentPopup";
+// import disabled: o popup promete um "catalogo exclusivo" mas o form
+// nao envia o email pra lugar nenhum. Reabilitar quando houver fluxo real.
 import { CookieBanner } from "@/components/conversion/CookieBanner";
 import { SITE } from "@/lib/constants";
 
@@ -26,7 +29,11 @@ export default function HomePage() {
     url: SITE.url,
     telephone: SITE.phone,
     email: SITE.email,
-    taxID: SITE.cnpj,
+    identifier: {
+      "@type": "PropertyValue",
+      propertyID: "CNPJ",
+      value: SITE.cnpj,
+    },
     address: {
       "@type": "PostalAddress",
       streetAddress: SITE.address.street,
@@ -48,7 +55,9 @@ export default function HomePage() {
         closes: "17:30",
       },
     ],
-    sameAs: [SITE.instagram, SITE.youtube, SITE.facebook],
+    sameAs: [SITE.instagram, SITE.youtube, SITE.facebook].filter(
+      (u) => u && !/^https?:\/\/(www\.)?(youtube|facebook)\.com\/?$/i.test(u)
+    ),
     priceRange: "$$",
     image: `${SITE.url}/og-image.jpg`,
   };
@@ -68,6 +77,7 @@ export default function HomePage() {
         <Services />
         <MidCTA />
         <HowItWorks />
+        <Projects />
         <Testimonials />
         <About />
         <FAQ />
@@ -77,7 +87,6 @@ export default function HomePage() {
       <Footer />
       <FloatingWhatsApp />
       <StickyMobileCTA />
-      <ExitIntentPopup />
       <CookieBanner />
     </>
   );

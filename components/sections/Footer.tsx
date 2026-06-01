@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Clock, Hash } from "lucide-react";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { SITE } from "@/lib/constants";
 import { fadeUp, viewportConfig } from "@/lib/animations";
 

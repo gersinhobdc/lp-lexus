@@ -46,7 +46,7 @@ function emailTemplate(data: {
           <tr><td style="padding:10px 0;color:#A1A1AA;font-size:13px">Tipo de projeto</td><td style="padding:10px 0;color:#E8E8ED;font-size:13px;font-weight:600">${projectLabels[data.projectType] ?? data.projectType}</td></tr>
         </table>
         <div style="margin-top:24px;padding:16px;background:#22C55E15;border-radius:10px;border:1px solid #22C55E30">
-          <p style="margin:0;color:#22C55E;font-size:13px;font-weight:600">⏰ Entrar em contato em até 1 hora</p>
+          <p style="margin:0;color:#22C55E;font-size:13px;font-weight:600">🆕 Novo lead recebido — entre em contato</p>
         </div>
         <p style="margin:20px 0 0;color:#A1A1AA;font-size:12px">Lexus Automação Inteligente · lexus.automacao@gmail.com · (11) 5668-7773</p>
       </div>

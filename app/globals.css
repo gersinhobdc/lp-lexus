@@ -8,15 +8,15 @@
   --color-lexus-blue: #1E40AF;
 
   /* Neutrals */
-  --color-obsidian: #1C1D27;
-  --color-graphite: #282A36;
+  --color-obsidian: #0A1628;
+  --color-graphite: #0F1E3D;
   --color-platinum: #E8E8ED;
   --color-ash: #A1A1AA;
 
   /* Semantic */
-  --color-background: #1C1D27;
+  --color-background: #0A1628;
   --color-foreground: #E8E8ED;
-  --color-card: #282A36;
+  --color-card: #0F1E3D;
   --color-border: rgba(255, 255, 255, 0.08);
   --color-muted: #A1A1AA;
 
@@ -68,7 +68,7 @@ html {
 }
 
 body {
-  background-color: #1C1D27;
+  background-color: #0A1628;
   color: #E8E8ED;
   font-family: var(--font-inter), system-ui, sans-serif;
   min-height: 100%;
@@ -86,7 +86,7 @@ body {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #1C1D27; }
+::-webkit-scrollbar-track { background: #0A1628; }
 ::-webkit-scrollbar-thumb { background: #22C55E; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: #16A34A; }
 
@@ -102,10 +102,10 @@ body {
 
 /* Glassmorphism */
 .glass {
-  background: rgba(40, 42, 54, 0.65);
+  background: rgba(15, 30, 61, 0.6);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(96, 165, 250, 0.12);
 }
 
 /* Green glow */

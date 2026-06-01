@@ -19,7 +19,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#282A36]/60 border-t border-white/5" aria-label="Rodapé">
+    <footer className="bg-[#0F1E3D]/60 border-t border-white/5" aria-label="Rodapé">
       <div className="section-container py-16">
         <motion.div
           variants={fadeUp}

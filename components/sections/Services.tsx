@@ -11,7 +11,7 @@ const ICONS = { Home, Building2, ShieldCheck, Volume2, Wifi } as const;
 
 export function Services() {
   return (
-    <section id="servicos" className="py-24 bg-[#282A36]/30" aria-label="Nossos serviços">
+    <section id="servicos" className="py-24 bg-[#0F1E3D]/35" aria-label="Nossos serviços">
       <div className="section-container">
         <SectionTitle
           eyebrow="O que fazemos"

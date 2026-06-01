@@ -95,7 +95,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               theme="dark"
               toastOptions={{
                 style: {
-                  background: "#282A36",
+                  background: "#0F1E3D",
                   border: "1px solid rgba(34,197,94,0.3)",
                   color: "#E8E8ED",
                 },

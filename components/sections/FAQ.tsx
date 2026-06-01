@@ -11,7 +11,7 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-24 bg-[#282A36]/20" aria-label="Perguntas frequentes">
+    <section id="faq" className="py-24 bg-[#0F1E3D]/30" aria-label="Perguntas frequentes">
       <div className="section-container">
         <SectionTitle
           eyebrow="FAQ"

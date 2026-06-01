@@ -26,7 +26,7 @@ const InstagramIcon = ({ size = 18, color = "currentColor" }: { size?: number; c
 
 export function Projects() {
   return (
-    <section id="projetos" className="py-24 bg-[#1C1D27]" aria-label="Projetos realizados">
+    <section id="projetos" className="py-24 bg-[#0A1628]" aria-label="Projetos realizados">
       <div className="section-container">
         <SectionTitle
           eyebrow="Projetos entregues"
@@ -49,7 +49,7 @@ export function Projects() {
               target="_blank"
               rel="noopener noreferrer"
               variants={fadeUp}
-              className={`group relative rounded-2xl overflow-hidden bg-[#282A36] border border-white/5 hover:border-white/15 transition-all duration-300 flex flex-col justify-between p-6 min-h-[220px] ${project.span}`}
+              className={`group relative rounded-2xl overflow-hidden bg-[#0F1E3D] border border-white/5 hover:border-white/15 transition-all duration-300 flex flex-col justify-between p-6 min-h-[220px] ${project.span}`}
             >
               {/* Glow de fundo na cor do projeto */}
               <div

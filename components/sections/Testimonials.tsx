@@ -27,7 +27,7 @@ export function Testimonials() {
   }, [emblaApi, onSelect]);
 
   return (
-    <section id="depoimentos" className="py-24 bg-[#282A36]/30 overflow-hidden" aria-label="Depoimentos de clientes">
+    <section id="depoimentos" className="py-24 bg-[#0F1E3D]/35 overflow-hidden" aria-label="Depoimentos de clientes">
       <div className="section-container">
         <SectionTitle
           eyebrow="Depoimentos"

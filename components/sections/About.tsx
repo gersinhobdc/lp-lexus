@@ -9,7 +9,7 @@ import { Award } from "lucide-react";
 
 export function About() {
   return (
-    <section id="sobre" className="py-24 bg-[#1C1D27]" aria-label="Sobre a Lexus">
+    <section id="sobre" className="py-24 bg-[#0A1628]" aria-label="Sobre a Lexus">
       <div className="section-container">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Image / visual side */}
@@ -20,7 +20,7 @@ export function About() {
             viewport={viewportConfig}
             className="relative"
           >
-            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-[#282A36] border border-white/5">
+            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-[#0F1E3D] border border-white/5">
               <Image
                 src="/images/sobre/showroom.jpeg"
                 alt="Showroom da Lexus Automação Inteligente em São Paulo"

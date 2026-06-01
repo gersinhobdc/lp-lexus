@@ -32,7 +32,7 @@ export function Hero() {
           className="absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(34,197,94,0.12) 0%, transparent 60%), linear-gradient(180deg, rgba(28,29,39,0.55) 0%, rgba(28,29,39,0.45) 40%, rgba(28,29,39,0.75) 80%, #1C1D27 100%)",
+              "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(34,197,94,0.14) 0%, transparent 60%), linear-gradient(180deg, rgba(10,22,40,0.55) 0%, rgba(10,22,40,0.45) 40%, rgba(10,22,40,0.78) 80%, #0A1628 100%)",
           }}
           aria-hidden="true"
         />

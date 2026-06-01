@@ -5,7 +5,8 @@ import { Problem } from "@/components/sections/Problem";
 import { Services } from "@/components/sections/Services";
 import { MidCTA } from "@/components/sections/MidCTA";
 import { HowItWorks } from "@/components/sections/HowItWorks";
-import { Projects } from "@/components/sections/Projects";
+// Projects desabilitado a pedido (excesso de informacao na pagina).
+// import { Projects } from "@/components/sections/Projects";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { About } from "@/components/sections/About";
 import { FAQ } from "@/components/sections/FAQ";
@@ -77,7 +78,6 @@ export default function HomePage() {
         <Services />
         <MidCTA />
         <HowItWorks />
-        <Projects />
         <Testimonials />
         <About />
         <FAQ />

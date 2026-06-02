@@ -10,7 +10,7 @@ const ICONS = { Search, FileText, CheckCircle } as const;
 
 export function HowItWorks() {
   return (
-    <section id="como-funciona" className="py-24 bg-[#0F1E3D]/30" aria-label="Como funciona">
+    <section id="como-funciona" className="py-24 bg-[#13284D]/30" aria-label="Como funciona">
       <div className="section-container">
         <SectionTitle
           eyebrow="Processo"

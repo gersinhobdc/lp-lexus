@@ -25,7 +25,7 @@ const SOLUTIONS = [
 
 export function Problem() {
   return (
-    <section id="problemas" className="py-24 bg-[#0A1628]" aria-label="Problemas e soluções">
+    <section id="problemas" className="py-24 bg-[#0C1F40]" aria-label="Problemas e soluções">
       <div className="section-container">
         <SectionTitle
           eyebrow="O que muda com a Lexus"

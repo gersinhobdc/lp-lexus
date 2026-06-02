@@ -9,7 +9,7 @@ export function SocialProof() {
   return (
     <section
       id="parceiros"
-      className="py-16 border-y border-white/5 bg-[#0F1E3D]/40"
+      className="py-16 border-y border-white/5 bg-[#13284D]/40"
       aria-label="Parceiros e estatísticas"
     >
       {/* Stats */}

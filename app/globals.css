@@ -92,6 +92,45 @@ body::before {
     radial-gradient(ellipse 40% 30% at 100% 0%, rgba(34, 197, 94, 0.05) 0%, transparent 60%);
 }
 
+/* Grid de pontos sutil (textura tech, ~4% opacity). Fixed para nao scrollar */
+/* junto, mantendo o ar de "papel milimetrado" das referencias. */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: radial-gradient(rgba(96, 165, 250, 0.18) 1px, transparent 1px);
+  background-size: 28px 28px;
+  background-position: 0 0;
+  opacity: 0.35;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, #000 30%, transparent 90%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, #000 30%, transparent 90%);
+}
+
+/* Scan line de cabecalho de secao (utility) — linha 1px com gradient azul-verde */
+/* que da aparencia de painel HUD. Aplicar com className="tech-divider". */
+.tech-divider {
+  position: relative;
+}
+.tech-divider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(59, 130, 246, 0.5) 30%,
+    rgba(34, 197, 94, 0.5) 50%,
+    rgba(59, 130, 246, 0.5) 70%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
 /* Focus visible */
 :focus-visible {
   outline: 2px solid #22C55E;

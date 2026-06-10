@@ -84,9 +84,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="pt-BR"
-      className={`${geistSans.variable} ${inter.variable} ${jetbrainsMono.variable} h-full scroll-smooth`}
+      className={`${geistSans.variable} ${inter.variable} ${jetbrainsMono.variable} scroll-smooth`}
     >
-      <body className="min-h-full antialiased">
+      <body className="antialiased">
         <SmoothScrollProvider>
           <RecaptchaProvider>
             {children}

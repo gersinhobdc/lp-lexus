@@ -20,7 +20,7 @@ export function Footer() {
 
   return (
     <footer className="bg-[#13284D]/60 border-t border-white/5" aria-label="Rodapé">
-      <div className="section-container py-16">
+      <div className="section-container pt-16 pb-32 md:pb-16">
         <motion.div
           variants={fadeUp}
           initial="hidden"

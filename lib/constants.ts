@@ -144,7 +144,7 @@ export const FAQS = [
   {
     question: "Qual o prazo de instalação?",
     answer:
-      "Varia de acordo com o projeto. Cada imóvel tem sua particularidade — pode demorar algumas horas ou alguns dias. Definimos o cronograma exato após a visita técnica.",
+      "Varia de acordo com o projeto. Cada imóvel tem sua particularidade, podendo demorar de algumas horas a alguns dias. Definimos o cronograma exato após a visita técnica.",
   },
   {
     question: "Vocês atendem qual região de SP?",

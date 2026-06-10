@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { type LucideProps, Home, Building2, ShieldCheck, Volume2, Wifi, Check, ArrowRight } from "lucide-react";
 import { SectionTitle } from "@/components/ui/SectionTitle";
@@ -69,6 +70,24 @@ function ServiceCard({
       style={{ rotateX, rotateY, transformStyle: "preserve-3d", perspective: 800 }}
       className="group relative glass rounded-2xl p-6 overflow-hidden hover:border-white/15 transition-all duration-300 cursor-default"
     >
+      {/* Background image */}
+      <Image
+        src={`/images/services/${service.id}.png`}
+        alt=""
+        fill
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        className="absolute inset-0 object-cover opacity-45 group-hover:opacity-60 transition-opacity duration-500 -z-0"
+        aria-hidden="true"
+      />
+      {/* Dark gradient overlay para legibilidade do texto */}
+      <div
+        className="absolute inset-0 rounded-2xl pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(115deg, rgba(12,31,64,0.92) 0%, rgba(12,31,64,0.78) 45%, rgba(12,31,64,0.35) 80%, transparent 100%)",
+        }}
+        aria-hidden="true"
+      />
       {/* Colored glow on hover */}
       <div
         className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -78,24 +97,24 @@ function ServiceCard({
 
       {/* Icon */}
       <div
-        className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110"
+        className="relative z-10 w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110"
         style={{ background: `${service.color}18`, border: `1px solid ${service.color}30` }}
       >
         <Icon size={22} style={{ color: service.color }} aria-hidden="true" />
       </div>
 
       {/* Title */}
-      <h3 className="font-[var(--font-geist-sans)] text-lg font-bold text-[#E8E8ED] mb-2">
+      <h3 className="relative z-10 font-[var(--font-geist-sans)] text-lg font-bold text-[#E8E8ED] mb-2">
         {service.title}
       </h3>
 
       {/* Description */}
-      <p className="text-sm text-[#A1A1AA] leading-relaxed mb-4">{service.description}</p>
+      <p className="relative z-10 text-sm text-[#E8E8ED]/85 leading-relaxed mb-4">{service.description}</p>
 
       {/* Features */}
-      <ul className="space-y-1.5 mb-5" role="list">
+      <ul className="relative z-10 space-y-1.5 mb-5" role="list">
         {service.features.map((f) => (
-          <li key={f} className="flex items-center gap-2 text-xs text-[#A1A1AA]">
+          <li key={f} className="flex items-center gap-2 text-xs text-[#E8E8ED]/75">
             <Check size={12} style={{ color: service.color }} aria-hidden="true" />
             {f}
           </li>
@@ -111,7 +130,7 @@ function ServiceCard({
 
       {/* CTA link */}
       <button
-        className="flex items-center gap-1 text-xs font-semibold transition-colors duration-200"
+        className="relative z-10 flex items-center gap-1 text-xs font-semibold transition-colors duration-200"
         style={{ color: service.color }}
         onClick={() =>
           document.getElementById("diagnostico")?.scrollIntoView({ behavior: "smooth" })

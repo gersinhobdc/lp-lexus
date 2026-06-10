@@ -68,12 +68,12 @@ function LexusLogo() {
         className="h-9 md:h-10 w-auto"
       />
       <Image
-        src="/images/lexus-wordmark.png.jpg"
+        src="/images/lexus-wordmark.png"
         alt="LEXUS — Automação Inteligente"
-        width={320}
-        height={120}
+        width={598}
+        height={262}
         priority
-        className="h-8 md:h-10 w-auto"
+        className="h-9 md:h-11 w-auto"
       />
     </div>
   );

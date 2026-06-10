@@ -130,7 +130,14 @@ export async function POST(request: NextRequest) {
     from: process.env.RESEND_FROM_EMAIL ?? "noreply@lexusbr.com",
     to: process.env.RESEND_TO_EMAIL ?? "lexus.automacao@gmail.com",
     subject: `🏠 Novo lead: ${name} — ${projectType} (${city})`,
-    html: emailTemplate({ name, whatsapp, city, projectType, interest, alsoCallable }),
+    html: emailTemplate({
+      name,
+      whatsapp,
+      city,
+      projectType,
+      interest: interest ?? "",
+      alsoCallable: alsoCallable ?? false,
+    }),
   });
 
   if (error) {

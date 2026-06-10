@@ -2,8 +2,6 @@
 
 Landing page de alta conversão desenvolvida por mim para a **Lexus Automação Inteligente**, empresa premium de automação residencial e corporativa em São Paulo (16+ anos de mercado, 2.500+ ambientes entregues).
 
-🌐 **Site em produção:** [lexusbr.com](https://lexusbr.com)
-
 ---
 
 ## 🎯 Sobre o projeto
@@ -41,7 +39,7 @@ Página única (one-page) construída para captar leads qualificados de clientes
 **Lexus Automação Inteligente**
 📍 Rua Juan Gonzales Vila, 166 — Vila Santo Antônio, São Paulo - SP
 📱 (11) 5668-7773
-🌐 [lexusbr.com](https://lexusbr.com) · [@lexus.automacao](https://instagram.com/lexus.automacao)
+🌐 [@lexus.automacao](https://instagram.com/lexus.automacao)
 
 ---
 

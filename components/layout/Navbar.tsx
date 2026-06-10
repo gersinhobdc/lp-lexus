@@ -67,14 +67,14 @@ function LexusLogo() {
         priority
         className="h-9 md:h-10 w-auto"
       />
-      <div className="leading-none">
-        <p className="font-[var(--font-geist-sans)] font-bold text-base md:text-lg text-[#E8E8ED] tracking-wide">
-          LEXUS
-        </p>
-        <p className="font-mono text-[8px] tracking-[0.18em] text-[#A1A1AA] uppercase mt-0.5">
-          Automação Inteligente
-        </p>
-      </div>
+      <Image
+        src="/images/lexus-wordmark.png.jpg"
+        alt="LEXUS — Automação Inteligente"
+        width={320}
+        height={120}
+        priority
+        className="h-8 md:h-10 w-auto"
+      />
     </div>
   );
 }

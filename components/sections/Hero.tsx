@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Zap } from "lucide-react";
 import { Button } from "@/components/ui/Button";
@@ -7,6 +8,21 @@ import { ParticleField } from "@/components/ui/ParticleField";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
 export function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.muted = true;
+    const tryPlay = () => v.play().catch(() => {});
+    tryPlay();
+    const onVisibility = () => {
+      if (document.visibilityState === "visible") tryPlay();
+    };
+    document.addEventListener("visibilitychange", onVisibility);
+    return () => document.removeEventListener("visibilitychange", onVisibility);
+  }, []);
+
   return (
     <section
       id="hero"
@@ -16,12 +32,15 @@ export function Hero() {
       {/* Background video + gradient fallback */}
       <div className="absolute inset-0 z-0">
         <video
+          ref={videoRef}
           autoPlay
           loop
           muted
           playsInline
-          preload="metadata"
+          {...{ "webkit-playsinline": "true" }}
+          preload="auto"
           poster="/images/hero-poster.svg"
+          disablePictureInPicture
           className="absolute inset-0 w-full h-full object-cover opacity-60"
           aria-hidden="true"
         >

@@ -61,11 +61,12 @@ function LexusLogo() {
     <div className="flex items-center gap-2.5">
       <Image
         src="/images/logo-lexus.png"
-        alt="Lexus Automação Inteligente"
+        alt=""
         width={120}
         height={108}
         priority
-        className="h-9 md:h-10 w-auto"
+        className="h-[41px] md:h-[46px] w-auto"
+        aria-hidden="true"
       />
       <Image
         src="/images/lexus-wordmark.png"
@@ -73,7 +74,7 @@ function LexusLogo() {
         width={598}
         height={262}
         priority
-        className="h-9 md:h-11 w-auto"
+        className="h-[41px] md:h-[51px] w-auto"
       />
     </div>
   );

@@ -113,7 +113,8 @@ export async function POST(request: NextRequest) {
   });
 
   if (error) {
-    console.error("[RESEND ERROR]", error);
+    console.error("[RESEND ERROR]", JSON.stringify(error, null, 2));
+    console.error("[RESEND ERROR] from=", process.env.RESEND_FROM_EMAIL, "to=", process.env.RESEND_TO_EMAIL);
     return NextResponse.json({ error: "Erro ao enviar email. Tente novamente." }, { status: 500 });
   }
 

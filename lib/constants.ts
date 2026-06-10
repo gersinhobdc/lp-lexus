@@ -154,7 +154,7 @@ export const FAQS = [
   {
     question: "Tem garantia e suporte depois da instalação?",
     answer:
-      "Sim. Garantia de 7 dias para produtos vendidos pela Lexus e 90 dias da instalação. Após esse período, oferecemos suporte remoto. Produtos seguem a garantia oficial do fabricante (geralmente 1 ano).",
+      "Sim. Garantia de 7 dias para produtos vendidos pela Lexus. Após esse período, oferecemos suporte remoto. Produtos seguem a garantia oficial do fabricante (geralmente 1 ano).",
   },
   {
     question: "Preciso reformar para automatizar?",
@@ -182,7 +182,7 @@ export const HOW_IT_WORKS = [
     step: "03",
     title: "Instalação premium",
     description:
-      "Equipe especializada 100% colaboradores próprios da Lexus. Garantia de 7 dias do produto, 90 dias da instalação e suporte contínuo.",
+      "Equipe especializada 100% colaboradores próprios da Lexus. Garantia de 7 dias do produto e suporte contínuo.",
     icon: "CheckCircle",
   },
 ] as const;

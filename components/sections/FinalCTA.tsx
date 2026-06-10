@@ -81,7 +81,7 @@ export function FinalCTA() {
             className="flex items-center justify-center gap-2 text-sm text-[#A1A1AA]"
           >
             <ShieldCheck size={16} className="text-[#22C55E]" aria-hidden="true" />
-            <span>Atendimento em SP / Capital · Equipe 100% própria da Lexus · Garantia de 90 dias da instalação</span>
+            <span>Atendimento em SP / Capital · Equipe 100% própria da Lexus</span>
           </motion.div>
         </motion.div>
       </div>

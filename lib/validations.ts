@@ -15,6 +15,12 @@ export const leadSchema = z.object({
     .string()
     .min(2, "Informe sua cidade")
     .max(80, "Nome de cidade muito longo"),
+  interest: z
+    .string()
+    .max(500, "Mensagem muito longa")
+    .optional()
+    .default(""),
+  alsoCallable: z.boolean().optional().default(false),
   recaptchaToken: z.string().min(1, "Token reCAPTCHA inválido"),
 });
 

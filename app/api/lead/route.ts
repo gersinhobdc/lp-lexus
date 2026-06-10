@@ -18,16 +18,36 @@ async function verifyRecaptcha(token: string): Promise<boolean> {
   }
 }
 
+function escapeHtml(s: string): string {
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;")
+    .replace(/\n/g, "<br>");
+}
+
 function emailTemplate(data: {
   name: string;
   whatsapp: string;
   city: string;
   projectType: string;
+  interest: string;
+  alsoCallable: boolean;
 }): string {
   const projectLabels: Record<string, string> = {
     residencial: "Residencial",
     corporativo: "Corporativo",
   };
+
+  const interestRow = data.interest
+    ? `<tr><td style="padding:10px 0;border-bottom:1px solid #ffffff10;color:#A1A1AA;font-size:13px;vertical-align:top">Projeto</td><td style="padding:10px 0;border-bottom:1px solid #ffffff10;color:#E8E8ED;font-size:13px;font-weight:600">${escapeHtml(data.interest)}</td></tr>`
+    : "";
+
+  const whatsappLabel = data.alsoCallable
+    ? `${escapeHtml(data.whatsapp)} <span style="color:#22C55E;font-weight:500">(também aceita ligações)</span>`
+    : escapeHtml(data.whatsapp);
 
   return `<!DOCTYPE html>
 <html lang="pt-BR">
@@ -40,10 +60,11 @@ function emailTemplate(data: {
       </div>
       <div style="padding:28px">
         <table style="width:100%;border-collapse:collapse">
-          <tr><td style="padding:10px 0;border-bottom:1px solid #ffffff10;color:#A1A1AA;font-size:13px;width:40%">Nome</td><td style="padding:10px 0;border-bottom:1px solid #ffffff10;color:#E8E8ED;font-size:13px;font-weight:600">${data.name}</td></tr>
-          <tr><td style="padding:10px 0;border-bottom:1px solid #ffffff10;color:#A1A1AA;font-size:13px">WhatsApp</td><td style="padding:10px 0;border-bottom:1px solid #ffffff10;color:#E8E8ED;font-size:13px;font-weight:600">${data.whatsapp}</td></tr>
-          <tr><td style="padding:10px 0;border-bottom:1px solid #ffffff10;color:#A1A1AA;font-size:13px">Cidade</td><td style="padding:10px 0;border-bottom:1px solid #ffffff10;color:#E8E8ED;font-size:13px;font-weight:600">${data.city}</td></tr>
-          <tr><td style="padding:10px 0;color:#A1A1AA;font-size:13px">Tipo de projeto</td><td style="padding:10px 0;color:#E8E8ED;font-size:13px;font-weight:600">${projectLabels[data.projectType] ?? data.projectType}</td></tr>
+          <tr><td style="padding:10px 0;border-bottom:1px solid #ffffff10;color:#A1A1AA;font-size:13px;width:40%">Nome</td><td style="padding:10px 0;border-bottom:1px solid #ffffff10;color:#E8E8ED;font-size:13px;font-weight:600">${escapeHtml(data.name)}</td></tr>
+          <tr><td style="padding:10px 0;border-bottom:1px solid #ffffff10;color:#A1A1AA;font-size:13px">WhatsApp</td><td style="padding:10px 0;border-bottom:1px solid #ffffff10;color:#E8E8ED;font-size:13px;font-weight:600">${whatsappLabel}</td></tr>
+          <tr><td style="padding:10px 0;border-bottom:1px solid #ffffff10;color:#A1A1AA;font-size:13px">Cidade</td><td style="padding:10px 0;border-bottom:1px solid #ffffff10;color:#E8E8ED;font-size:13px;font-weight:600">${escapeHtml(data.city)}</td></tr>
+          <tr><td style="padding:10px 0;${interestRow ? "border-bottom:1px solid #ffffff10;" : ""}color:#A1A1AA;font-size:13px">Tipo</td><td style="padding:10px 0;${interestRow ? "border-bottom:1px solid #ffffff10;" : ""}color:#E8E8ED;font-size:13px;font-weight:600">${projectLabels[data.projectType] ?? data.projectType}</td></tr>
+          ${interestRow}
         </table>
         <div style="margin-top:24px;padding:16px;background:#22C55E15;border-radius:10px;border:1px solid #22C55E30">
           <p style="margin:0;color:#22C55E;font-size:13px;font-weight:600">🆕 Novo lead recebido — entre em contato</p>
@@ -90,7 +111,7 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const { name, whatsapp, city, projectType, recaptchaToken } = parsed.data;
+  const { name, whatsapp, city, projectType, interest, alsoCallable, recaptchaToken } = parsed.data;
 
   // reCAPTCHA
   const captchaOk = await verifyRecaptcha(recaptchaToken);
@@ -100,7 +121,7 @@ export async function POST(request: NextRequest) {
 
   // Send email
   if (!process.env.RESEND_API_KEY || process.env.RESEND_API_KEY.startsWith("re_placeholder")) {
-    console.log("[LEAD]", { name, whatsapp, city, projectType });
+    console.log("[LEAD]", { name, whatsapp, city, projectType, interest, alsoCallable });
     return NextResponse.json({ ok: true });
   }
 
@@ -109,23 +130,12 @@ export async function POST(request: NextRequest) {
     from: process.env.RESEND_FROM_EMAIL ?? "noreply@lexusbr.com",
     to: process.env.RESEND_TO_EMAIL ?? "lexus.automacao@gmail.com",
     subject: `🏠 Novo lead: ${name} — ${projectType} (${city})`,
-    html: emailTemplate({ name, whatsapp, city, projectType }),
+    html: emailTemplate({ name, whatsapp, city, projectType, interest, alsoCallable }),
   });
 
   if (error) {
     console.error("[RESEND ERROR]", JSON.stringify(error, null, 2));
-    console.error("[RESEND ERROR] from=", process.env.RESEND_FROM_EMAIL, "to=", process.env.RESEND_TO_EMAIL);
-    return NextResponse.json(
-      {
-        error: "Erro ao enviar email. Tente novamente.",
-        debug: {
-          resend_error: error,
-          from: process.env.RESEND_FROM_EMAIL,
-          to: process.env.RESEND_TO_EMAIL,
-        },
-      },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: "Erro ao enviar email. Tente novamente." }, { status: 500 });
   }
 
   return NextResponse.json({ ok: true });

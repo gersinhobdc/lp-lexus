@@ -67,6 +67,8 @@ export function LeadForm({ sectionId = "diagnostico" }: { sectionId?: string } =
       name: "",
       whatsapp: "",
       city: "",
+      interest: "",
+      alsoCallable: false,
       recaptchaToken: "pending",
     },
   });
@@ -352,6 +354,45 @@ export function LeadForm({ sectionId = "diagnostico" }: { sectionId?: string } =
                         </p>
                       )}
                     </div>
+
+                    <div>
+                      <label htmlFor={`${sectionId}-interest`} className="block text-sm font-medium text-[#E8E8ED] mb-1.5">
+                        Conte sobre o seu projeto{" "}
+                        <span className="text-[#A1A1AA] font-normal">(opcional)</span>
+                      </label>
+                      <textarea
+                        id={`${sectionId}-interest`}
+                        rows={3}
+                        placeholder="Ex: quero automatizar iluminação e som da sala, e instalar câmeras no quintal."
+                        {...register("interest")}
+                        className={cn(
+                          "w-full px-4 py-3 rounded-xl bg-white/[0.04] border text-[#E8E8ED] placeholder-[#A1A1AA]/50 text-sm transition-colors resize-none",
+                          "focus:outline-none focus:border-[#22C55E]/60 focus:bg-[#22C55E]/5",
+                          errors.interest ? "border-red-500/50" : "border-white/8"
+                        )}
+                      />
+                      {errors.interest && (
+                        <p className="mt-1 text-xs text-red-400" role="alert">
+                          {errors.interest.message}
+                        </p>
+                      )}
+                    </div>
+
+                    <label
+                      htmlFor={`${sectionId}-alsoCallable`}
+                      className="flex items-start gap-3 cursor-pointer select-none"
+                    >
+                      <input
+                        id={`${sectionId}-alsoCallable`}
+                        type="checkbox"
+                        {...register("alsoCallable")}
+                        className="mt-0.5 w-4 h-4 rounded border-white/15 bg-white/[0.04] text-[#22C55E] focus:ring-2 focus:ring-[#22C55E]/40 focus:ring-offset-0 accent-[#22C55E] cursor-pointer"
+                      />
+                      <span className="text-xs text-[#A1A1AA] leading-snug">
+                        Este número também é meu telefone para{" "}
+                        <strong className="text-[#E8E8ED]">ligações</strong>.
+                      </span>
+                    </label>
 
                     <Button type="submit" size="lg" className="w-full mt-2" disabled={isSubmitting}>
                       {isSubmitting ? (

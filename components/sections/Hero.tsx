@@ -125,7 +125,7 @@ export function Hero() {
           </span>
           <span className="hidden sm:block w-px h-4 bg-white/10" aria-hidden="true" />
           <span>
-            <strong className="text-[#E8E8ED]">100%</strong> equipe Lexus
+            <strong className="text-[#E8E8ED]">100%</strong> equipe própria Lexus
           </span>
         </motion.div>
       </motion.div>

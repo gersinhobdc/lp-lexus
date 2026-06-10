@@ -101,7 +101,7 @@ export function Footer() {
           {/* Col 4: Map */}
           <div>
             <h3 className="font-semibold text-[#E8E8ED] mb-4 text-sm">Localização</h3>
-            <div className="rounded-xl overflow-hidden border border-white/5 aspect-video">
+            <div className="rounded-xl overflow-hidden border border-white/5 aspect-video relative">
               <iframe
                 title="Localização da Lexus Automação Inteligente"
                 src={`https://maps.google.com/maps?q=${encodeURIComponent(SITE.address.full)}&output=embed&z=15`}
@@ -109,7 +109,14 @@ export function Footer() {
                 height="100%"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="w-full h-full grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                className="w-full h-full grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 pointer-events-none"
+              />
+              <a
+                href={SITE.address.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abrir mapa no Google Maps"
+                className="absolute inset-0"
               />
             </div>
           </div>
@@ -178,19 +185,19 @@ function FooterLogo() {
     <div className="flex items-center gap-3">
       <Image
         src="/images/logo-lexus.png"
-        alt="Lexus Automação Inteligente"
+        alt=""
         width={120}
         height={108}
         className="h-11 w-auto"
+        aria-hidden="true"
       />
-      <div className="leading-none">
-        <p className="font-[var(--font-geist-sans)] font-bold text-lg text-[#E8E8ED] tracking-wide">
-          LEXUS
-        </p>
-        <p className="font-mono text-[8px] tracking-[0.18em] text-[#A1A1AA] uppercase mt-0.5">
-          Automação Inteligente
-        </p>
-      </div>
+      <Image
+        src="/images/lexus-wordmark.png"
+        alt="LEXUS — Automação Inteligente"
+        width={598}
+        height={262}
+        className="h-9 w-auto"
+      />
     </div>
   );
 }

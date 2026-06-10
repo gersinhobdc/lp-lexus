@@ -14,13 +14,28 @@ export function Hero() {
     const v = videoRef.current;
     if (!v) return;
     v.muted = true;
+    v.defaultMuted = true;
+    try { v.load(); } catch {}
     const tryPlay = () => v.play().catch(() => {});
     tryPlay();
+    v.addEventListener("canplay", tryPlay);
     const onVisibility = () => {
       if (document.visibilityState === "visible") tryPlay();
     };
+    const onFirstTouch = () => {
+      tryPlay();
+      window.removeEventListener("touchstart", onFirstTouch);
+      window.removeEventListener("click", onFirstTouch);
+    };
+    window.addEventListener("touchstart", onFirstTouch, { passive: true });
+    window.addEventListener("click", onFirstTouch);
     document.addEventListener("visibilitychange", onVisibility);
-    return () => document.removeEventListener("visibilitychange", onVisibility);
+    return () => {
+      v.removeEventListener("canplay", tryPlay);
+      document.removeEventListener("visibilitychange", onVisibility);
+      window.removeEventListener("touchstart", onFirstTouch);
+      window.removeEventListener("click", onFirstTouch);
+    };
   }, []);
 
   return (

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { leadSchema, type LeadInput } from "@/lib/validations";
-import { SITE, SCARCITY } from "@/lib/constants";
+import { SITE, SCARCITY, computeSlotsLeft } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { fadeUp } from "@/lib/animations";
 
@@ -54,7 +54,12 @@ export function LeadForm({ sectionId = "diagnostico" }: { sectionId?: string } =
   const [step, setStep] = useState(1);
   const [projectType, setProjectType] = useState<ProjectType | null>(null);
   const [submitted, setSubmitted] = useState(false);
+  const [slotsLeft, setSlotsLeft] = useState<number | null>(null);
   const { executeRecaptcha } = useGoogleReCaptcha();
+
+  useEffect(() => {
+    setSlotsLeft(computeSlotsLeft());
+  }, []);
 
   const {
     register,
@@ -156,7 +161,7 @@ export function LeadForm({ sectionId = "diagnostico" }: { sectionId?: string } =
           </motion.p>
 
           {/* Escassez honesta */}
-          {SCARCITY.slotsLeft > 0 && (
+          {slotsLeft !== null && slotsLeft > 0 && (
             <motion.div
               variants={fadeUp}
               initial="hidden"
@@ -169,7 +174,7 @@ export function LeadForm({ sectionId = "diagnostico" }: { sectionId?: string } =
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#FACC15]" />
               </span>
               <span className="text-xs font-medium text-[#FACC15]">
-                Apenas {SCARCITY.slotsLeft} {SCARCITY.label}
+                Apenas {slotsLeft} {SCARCITY.label}
               </span>
             </motion.div>
           )}

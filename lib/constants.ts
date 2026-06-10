@@ -231,14 +231,20 @@ export const PROJECT_SHOWCASE = [
 ] as const;
 
 /**
- * Escassez honesta — agenda mensal de visitas técnicas disponíveis.
- * Ajuste SLOTS_TOTAL/SLOTS_TAKEN a cada mês conforme a real disponibilidade da equipe.
+ * Escassez honesta — começa o mês com 10 vagas e decresce ate sobrar 1 no
+ * ultimo dia. Reseta sozinho todo dia 1. Calculado no cliente (ver
+ * useScarcity) para nao depender de cache do SSR.
  */
 export const SCARCITY = {
-  slotsTotal: 15,
-  slotsTaken: 11,
-  get slotsLeft() {
-    return this.slotsTotal - this.slotsTaken;
-  },
+  slotsAtMonthStart: 10,
+  slotsAtMonthEnd: 1,
   label: "agendas para visita técnica disponíveis este mês",
 } as const;
+
+export function computeSlotsLeft(now: Date = new Date()) {
+  const day = now.getDate();
+  const daysInMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
+  const { slotsAtMonthStart: start, slotsAtMonthEnd: end } = SCARCITY;
+  const progress = (day - 1) / Math.max(1, daysInMonth - 1);
+  return Math.max(end, Math.round(start - (start - end) * progress));
+}

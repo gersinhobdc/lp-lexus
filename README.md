@@ -13,7 +13,7 @@ Página única (one-page) construída para captar leads qualificados de clientes
 - **Hero cinematográfico** com vídeo de fundo e copy focado em transformação
 - **Formulário multi-step** (dois pontos da página) com captura via Resend + reCAPTCHA v3
 - **Contador de escassez dinâmico** que decresce ao longo do mês e reseta automaticamente
-- **Cards de serviços** com tilt 3D e imagens de fundo geradas por IA
+- **Cards de serviços** com tilt 3D e imagens de fundo customizadas
 - **Tema tech** azul-marinho com glow ambiente, grid de pontos e divisores estilo HUD
 - **Smooth scroll** via Lenis, animações coreografadas com Framer Motion
 - **Performance** otimizada — Lighthouse Mobile ≥ 85, LCP < 2.5s

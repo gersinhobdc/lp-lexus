@@ -43,10 +43,4 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-.claude/
-.playwright-mcp/
 tsconfig.tsbuildinfo
-docs/superpowers/
-!docs/superpowers/
-!docs/superpowers/plans/
-!docs/superpowers/plans/2026-05-29-revisao-feedback-rafael.md

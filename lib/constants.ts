@@ -3,7 +3,7 @@ export const SITE = {
   tagline: "Automação residencial premium em São Paulo",
   description:
     "Transformamos sua casa em ambiente inteligente com automação premium. Especialistas em iluminação, som ambiente, climatização, segurança e Wi-Fi mesh em São Paulo.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://lexusbr.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://lexusautomacao.com",
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_LINK ?? "https://wa.link/czw9nk",
   phone: process.env.NEXT_PUBLIC_PHONE ?? "+551156687773",
   phoneDisplay: "(11) 5668-7773",

@@ -37,7 +37,7 @@ Página única (one-page) construída para captar leads qualificados de clientes
 ## 🏢 Sobre a Lexus
 
 **Lexus Automação Inteligente**
-📍 Rua Juan Gonzales Vila, 166 — Vila Santo Antônio, São Paulo - SP
+📍 Av. Adolfo Pinheiro, 1800 — Santo Amaro, São Paulo - SP
 📱 (11) 5668-7773
 🌐 [@lexus.automacao](https://instagram.com/lexus.automacao)
 

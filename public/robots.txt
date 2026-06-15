@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://lexusbr.com
+Host: https://lexusautomacao.com
 
 # Sitemaps
-Sitemap: https://lexusbr.com/sitemap.xml
+Sitemap: https://lexusautomacao.com/sitemap.xml

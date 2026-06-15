@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
   verification: {
-    google: "",
+    google: "XweW3qxBtZo6wbxoHgjLTGdmTE0d0O7WwrIOXQ9_8Mo",
   },
   alternates: {
     canonical: SITE.url,

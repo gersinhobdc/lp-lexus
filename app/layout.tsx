@@ -10,6 +10,8 @@ import { SITE } from "@/lib/constants";
 import "./globals.css";
 
 const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+const PRIMARY_GTAG_ID = GA_ID ?? GOOGLE_ADS_ID;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -108,18 +110,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </SmoothScrollProvider>
         <Analytics />
         <SpeedInsights />
-        {GOOGLE_ADS_ID && (
+        {PRIMARY_GTAG_ID && (
           <>
             <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
+              src={`https://www.googletagmanager.com/gtag/js?id=${PRIMARY_GTAG_ID}`}
               strategy="afterInteractive"
             />
-            <Script id="google-ads-tag" strategy="afterInteractive">
+            <Script id="gtag-init" strategy="afterInteractive">
               {`
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-                gtag('config', '${GOOGLE_ADS_ID}');
+                ${GA_ID ? `gtag('config', '${GA_ID}');` : ""}
+                ${GOOGLE_ADS_ID ? `gtag('config', '${GOOGLE_ADS_ID}');` : ""}
               `}
             </Script>
           </>

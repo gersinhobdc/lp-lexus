@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -51,6 +52,7 @@ const TRUST_SEALS = [
 ];
 
 export function LeadForm({ sectionId = "diagnostico" }: { sectionId?: string } = {}) {
+  const router = useRouter();
   const [step, setStep] = useState(1);
   const [projectType, setProjectType] = useState<ProjectType | null>(null);
   const [submitted, setSubmitted] = useState(false);
@@ -103,6 +105,7 @@ export function LeadForm({ sectionId = "diagnostico" }: { sectionId?: string } =
       }
 
       setSubmitted(true);
+      router.push("/obrigado");
     } catch (err: unknown) {
       const message =
         err instanceof Error ? err.message : "Erro ao enviar. Tente novamente.";

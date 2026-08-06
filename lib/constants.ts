@@ -90,7 +90,7 @@ export const LED_PANELS = [
     description:
       "Display vertical em pedestal para lojas, recepções, shoppings e eventos. Fácil de reposicionar e ideal para conteúdo dinâmico.",
     color: "#22C55E",
-    image: "/images/led/totem.jpg",
+    image: "/images/totem.jpg",
     imageAlt: "Totem de LED indoor instalado em corredor de shopping",
     features: [
       "Instalação sem obra",
@@ -105,7 +105,7 @@ export const LED_PANELS = [
     description:
       "Painel fixo de alto brilho para fachadas e ambientes internos. Estrutura, cabeamento e configuração feitos pela nossa equipe.",
     color: "#FACC15",
-    image: "/images/led/parede.jpg",
+    image: "/images/parede.jpg",
     imageAlt: "Painel de LED retangular instalado em fachada de prédio",
     features: [
       "Alto brilho com leitura sob sol",

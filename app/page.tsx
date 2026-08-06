@@ -3,6 +3,7 @@ import { Hero } from "@/components/sections/Hero";
 import { SocialProof } from "@/components/sections/SocialProof";
 import { Problem } from "@/components/sections/Problem";
 import { Services } from "@/components/sections/Services";
+import { LedPanels } from "@/components/sections/LedPanels";
 import { MidCTA } from "@/components/sections/MidCTA";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 // Projects desabilitado a pedido (excesso de informacao na pagina).
@@ -76,6 +77,7 @@ export default function HomePage() {
         <SocialProof />
         <Problem />
         <Services />
+        <LedPanels />
         <MidCTA />
         <HowItWorks />
         <Testimonials />

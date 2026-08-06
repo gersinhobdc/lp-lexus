@@ -82,6 +82,39 @@ export const SERVICES = [
   },
 ] as const;
 
+export const LED_PANELS = [
+  {
+    id: "totem",
+    icon: "Monitor",
+    title: "Totem de LED (indoor)",
+    description:
+      "Display vertical em pedestal para lojas, recepções, shoppings e eventos. Fácil de reposicionar e ideal para conteúdo dinâmico.",
+    color: "#22C55E",
+    image: "/images/led/totem.jpg",
+    imageAlt: "Totem de LED indoor instalado em corredor de shopping",
+    features: [
+      "Instalação sem obra",
+      "Alta resolução para curta distância",
+      "Gestão de conteúdo remota",
+    ],
+  },
+  {
+    id: "parede",
+    icon: "Sun",
+    title: "Painel de parede (indoor/outdoor)",
+    description:
+      "Painel fixo de alto brilho para fachadas e ambientes internos. Estrutura, cabeamento e configuração feitos pela nossa equipe.",
+    color: "#FACC15",
+    image: "/images/led/parede.jpg",
+    imageAlt: "Painel de LED retangular instalado em fachada de prédio",
+    features: [
+      "Alto brilho com leitura sob sol",
+      "Resistente a chuva e poeira (outdoor)",
+      "Projeto sob medida de tamanho",
+    ],
+  },
+] as const;
+
 export const BRANDS = [
   { name: "Intelbras", src: "/images/brands/intelbras.png" },
   { name: "Sonos", src: "/images/brands/sonos.png" },

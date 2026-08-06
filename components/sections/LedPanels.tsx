@@ -17,7 +17,7 @@ export function LedPanels() {
           eyebrow="Comunicação visual"
           title="Painéis de LED"
           titleHighlight="indoor e outdoor"
-          subtitle="Venda e instalação de painéis de LED de alto brilho para lojas, empresas e fachadas. Projeto, estrutura e configuração feitos pela equipe Lexus."
+          subtitle="Venda e instalação de painéis de LED de alto brilho para lojas, empresas e fachadas."
         />
 
         <motion.div

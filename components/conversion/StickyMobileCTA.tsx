@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, Phone, CalendarCheck } from "lucide-react";
 import { SITE } from "@/lib/constants";
+import { trackWhatsAppClick, trackPhoneClick } from "@/lib/analytics";
 
 export function StickyMobileCTA() {
   const [visible, setVisible] = useState(false);
@@ -37,6 +38,7 @@ export function StickyMobileCTA() {
             </button>
             <a
               href={`tel:${SITE.phone}`}
+              onClick={() => trackPhoneClick("barra_mobile")}
               className="flex flex-col items-center gap-1 py-2 rounded-xl border border-white/10 text-[#E8E8ED] hover:border-white/20 transition-all active:scale-95"
             >
               <Phone size={20} aria-hidden="true" />
@@ -46,6 +48,7 @@ export function StickyMobileCTA() {
               href={SITE.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick("barra_mobile")}
               className="flex flex-col items-center gap-1 py-2 rounded-xl border border-[#22C55E]/30 text-[#22C55E] hover:bg-[#22C55E]/10 transition-all active:scale-95"
             >
               <MessageCircle size={20} aria-hidden="true" />

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CheckCircle } from "lucide-react";
-import { SITE } from "@/lib/constants";
+import { TrackedWhatsAppLink } from "@/components/conversion/TrackedWhatsAppLink";
 
 export const metadata: Metadata = {
   title: "Obrigado pelo contato",
@@ -22,14 +22,12 @@ export default function ObrigadoPage() {
           Recebemos seu contato e entraremos em breve via WhatsApp.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
-          <a
-            href={SITE.whatsapp}
-            target="_blank"
-            rel="noopener noreferrer"
+          <TrackedWhatsAppLink
+            origem="pagina_obrigado"
             className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#22C55E] text-[#0A0A0A] font-bold text-sm hover:bg-[#16A34A] transition-colors"
           >
             Falar no WhatsApp agora
-          </a>
+          </TrackedWhatsAppLink>
           <Link
             href="/"
             className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-white/10 text-[#E8E8ED] font-medium text-sm hover:border-white/30 transition-colors"

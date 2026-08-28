@@ -20,6 +20,7 @@ import {
 import { Button } from "@/components/ui/Button";
 import { leadSchema, type LeadInput } from "@/lib/validations";
 import { SITE, SCARCITY, computeSlotsLeft } from "@/lib/constants";
+import { trackWhatsAppClick } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 import { fadeUp } from "@/lib/animations";
 
@@ -229,6 +230,7 @@ export function LeadForm({ sectionId = "diagnostico" }: { sectionId?: string } =
                     href={SITE.whatsapp}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => trackWhatsAppClick("pos_formulario")}
                     className="inline-flex items-center gap-2 mt-6 px-6 py-3 rounded-full bg-[#22C55E] text-[#0A0A0A] font-bold text-sm hover:bg-[#16A34A] transition-colors"
                   >
                     Falar agora no WhatsApp

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Phone, MessageCircle, ShieldCheck } from "lucide-react";
 import { SITE } from "@/lib/constants";
+import { trackWhatsAppClick, trackPhoneClick } from "@/lib/analytics";
 import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
 
 export function FinalCTA() {
@@ -62,6 +63,7 @@ export function FinalCTA() {
               href={SITE.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick("cta_final")}
               className="inline-flex items-center justify-center gap-2 bg-[#22C55E] text-[#0A0A0A] px-8 py-4 rounded-full font-bold text-base hover:bg-[#16A34A] transition-all duration-300 shadow-xl shadow-[#22C55E]/25 hover:shadow-[#22C55E]/40 active:scale-95"
             >
               <MessageCircle size={20} aria-hidden="true" />
@@ -69,6 +71,7 @@ export function FinalCTA() {
             </a>
             <a
               href={`tel:${SITE.phone}`}
+              onClick={() => trackPhoneClick("cta_final")}
               className="inline-flex items-center justify-center gap-2 border border-white/15 text-[#E8E8ED] px-8 py-4 rounded-full font-semibold text-base hover:border-white/30 hover:bg-white/5 transition-all duration-300"
             >
               <Phone size={20} aria-hidden="true" />

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { SITE } from "@/lib/constants";
+import { trackPhoneClick } from "@/lib/analytics";
 import { fadeUp, viewportConfig } from "@/lib/animations";
 
 const QUICK_LINKS = [
@@ -67,6 +68,7 @@ export function Footer() {
               <li>
                 <a
                   href={`tel:${SITE.phone}`}
+                  onClick={() => trackPhoneClick("rodape")}
                   className="flex items-start gap-2.5 text-sm text-[#A1A1AA] hover:text-[#22C55E] transition-colors"
                 >
                   <Phone size={15} className="mt-0.5 shrink-0 text-[#22C55E]" aria-hidden="true" />

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { SITE } from "@/lib/constants";
+import { trackPhoneClick } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 
 /**
@@ -42,6 +43,7 @@ export function Navbar() {
           {/* Telefone clicável — desktop */}
           <a
             href={`tel:${SITE.phone}`}
+            onClick={() => trackPhoneClick("navbar")}
             className="hidden sm:flex items-center gap-2 text-sm text-[#A1A1AA] hover:text-[#22C55E] transition-colors"
           >
             <Phone size={15} aria-hidden="true" />

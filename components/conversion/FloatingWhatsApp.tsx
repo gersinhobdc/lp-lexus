@@ -2,6 +2,7 @@
 
 import { MessageCircle } from "lucide-react";
 import { SITE } from "@/lib/constants";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 export function FloatingWhatsApp() {
   return (
@@ -11,6 +12,7 @@ export function FloatingWhatsApp() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Falar no WhatsApp"
+        onClick={() => trackWhatsAppClick("botao_flutuante")}
         className="relative group"
       >
         {/* Pulse rings */}

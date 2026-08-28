@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import { fadeUp, viewportConfig } from "@/lib/animations";
 import { SITE } from "@/lib/constants";
+import { trackWhatsAppClick } from "@/lib/analytics";
 import { ArrowRight, MessageCircle } from "lucide-react";
 
 export function MidCTA() {
@@ -73,6 +74,7 @@ export function MidCTA() {
             href={SITE.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackWhatsAppClick("cta_meio")}
             className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 px-8 py-4 text-base font-semibold text-[#E8E8ED] hover:border-[#22C55E]/40 hover:text-[#22C55E] transition-all duration-300"
           >
             <MessageCircle size={18} aria-hidden="true" />
